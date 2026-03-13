@@ -33,7 +33,7 @@ const deleteEmployee = async (id) => {
   }
 
   // Delete associated attendance records
-  const Attendance = require('../models/Attendance');
+  const Attendance = require('../models/attendence.model');
   await Attendance.deleteMany({ employee: id });
 
   await Employee.findByIdAndDelete(id);
